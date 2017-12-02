@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Add Applicant</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="dismiss($event)">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-item>
+         <div>
+           <div [hidden]="hidePlayer"><video  #player autoplay style="width:100%;height:100%"></video></div>
+           <div [hidden]="hideCanvas"><canvas  #canvas style="width:100%;height:100%"></canvas></div>
+           <button ion-button round [hidden]="hideCaptureButton" (click)="captureImage($event)" class="transform">Capture</button>
+           <button ion-button round [hidden]="hideLocationButton" (click)="getLocation($event)" class="transform">Get Location</button>                    
+           <ion-spinner [hidden]="hideLoader" name="bubbles"></ion-spinner>           
+        </div>
+         <div [hidden]="hideImagePickerArea">
+           <br/><h5>Pick an Image</h5>
+           <input type="file" accept="image/*" (change) = "selectImage($event)">
+         </div>
+       </ion-item>
+  <form #submitForm="ngForm" novalidate (ngSubmit)="submit(submitForm)">
+    <ion-list no-lines>       
+       <ion-item>
+          <ion-label floating color="primary">Name*</ion-label>
+          <ion-input type="text" [(ngModel)]="user.name" name="name" #name="ngModel" required></ion-input>
+       </ion-item>      
+        <span ion-text [hidden]="name.valid || submitted === false" color="danger" padding-left>
+         Name is required
+        </span>    
+       <ion-item>
+          <ion-label floating color="primary">Date of Birth*</ion-label>
+          <ion-datetime 
+              max="2012"
+              min="1920"
+              displayFormat="MMM DD, YYYY" 
+              pickerFormat="MMM DD, YYYY" 
+              [(ngModel)]="user.birthDate"
+              name="birthDate"  
+              #birthDate="ngModel" 
+              required          
+              ></ion-datetime>
+       </ion-item>
+       <span ion-text [hidden]="birthDate.valid || submitted === false" color="danger" padding-left>
+            Date of Birth is required
+      </span>  
+      <ion-item>
+          <ion-label floating color="primary">Phone</ion-label>
+          <ion-input type="text" [(ngModel)]="user.phone" name="phone" #phone="ngModel"></ion-input>
+       </ion-item>      
+        <ion-item>
+          <ion-label floating color="primary">Email*</ion-label>
+          <ion-input type="email" [(ngModel)]="user.email" name="email" #email="ngModel" required 
+                     pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})">
+          </ion-input>
+       </ion-item>      
+        <span ion-text [hidden]="email.valid || submitted === false" color="danger" padding-left>
+         Valid Email is required
+        </span>      
+       <ion-item>
+          <ion-label floating color="primary">Title*</ion-label>
+          <ion-input type="text" [(ngModel)]="user.title" name="title" #title="ngModel" required></ion-input>
+       </ion-item>      
+        <span ion-text [hidden]="title.valid || submitted === false" color="danger" padding-left>
+         Title is required
+        </span>    
+        <ion-item>
+          <ion-label floating color="primary">Description</ion-label>
+          <ion-textarea type="text" [(ngModel)]="user.description" name="description" #description="ngModel"></ion-textarea>
+       </ion-item>       
+        <ion-item>
+          <ion-label floating color="primary">Location*</ion-label>
+          <ion-input type="text" [(ngModel)]="user.location" name="location" #location="ngModel" required></ion-input>
+       </ion-item>      
+        <span ion-text [hidden]="location.valid || submitted === false" color="danger" padding-left>
+        Location is required
+      </span>  
+    </ion-list>    
+    <div padding>
+       <button ion-button round type="submit" class="transform">Submit</button>
+    </div>
+  </form>
+</ion-content>

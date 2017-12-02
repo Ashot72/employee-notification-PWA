@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-navbar color="primary" hideBackButton="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="gotoUserListPage($event)">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>{{ user?.name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding   text-center text-wrap>
+  <h3>{{ user?.name }}</h3>
+   <div>
+    <img [src]="user?.picture" alt="picture">
+   </div>
+    <ion-grid>
+      <ion-row>
+         <ion-col text-right>
+           <span ion-text color="primary">Date of Birth:</span>
+         </ion-col>
+         <ion-col text-left>
+            {{ user?.birthDate | date }}
+         </ion-col>
+      </ion-row>
+        <ion-row *ngIf="user && user.phone && user.phone !== 'undefined'">
+         <ion-col text-right>
+           <span ion-text color="primary">Phone:</span>
+         </ion-col>
+         <ion-col text-left>
+            {{ user.phone }}
+         </ion-col>
+      </ion-row>
+       <ion-row>
+         <ion-col text-right>
+           <span ion-text color="primary">Email:</span>
+         </ion-col>
+         <ion-col text-left>
+            {{ user?.email }}
+         </ion-col>
+      </ion-row>
+      <ion-row>
+         <ion-col text-right>
+           <span ion-text color="primary">Location:</span>
+         </ion-col>
+         <ion-col text-left>
+            {{ user?.location }}
+         </ion-col>
+      </ion-row>
+      <ion-row>
+         <ion-col text-right>
+           <span ion-text color="primary">Title:</span>
+         </ion-col>
+         <ion-col text-left>
+            {{ user?.title }}
+         </ion-col>
+      </ion-row>
+      <ion-row *ngIf="user && user.description && user.description !== 'undefined'">
+         <ion-col text-right>
+           <span ion-text color="primary">Description:</span>
+         </ion-col>
+         <ion-col text-left>
+            {{ user.description }}
+         </ion-col>
+      </ion-row>       
+      <ion-row>
+         <ion-col text-right>
+           <span ion-text color="primary">Registration Date:</span>
+         </ion-col>
+         <ion-col text-left>
+            {{ user?.regDate | date:"medium" }}
+         </ion-col>
+      </ion-row>
+    </ion-grid>
+     <map-control *ngIf="user" [user]="user"></map-control>
+</ion-content>

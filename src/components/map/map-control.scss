@@ -1,0 +1,25 @@
+
+map-control ion-content {
+  background: rgb(229, 227, 223);
+}
+
+map-control #over_map {
+  text-align: center;
+  position: absolute;
+  font-size: 30px;
+  top: 10px;
+  left:10px;
+  color:red;
+  z-index: 100;
+}
+
+map-control #map {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 150ms ease-in
+}
+
+map-control #map.show-map {
+  opacity: 1;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ionic App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4e8ef7">
+  
+  <!-- add to homescreen for ios -->  
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="PWAGram">
+  <link rel="apple-touch-icon" href="/assets/imgs/icons/apple-icon-57x57.png" sizes="57x57">
+  <link rel="apple-touch-icon" href="/assets/imgs/icons/apple-icon-60x60.png" sizes="60x60">
+  <link rel="apple-touch-icon" href="/assets/imgs/icons/apple-icon-72x72.png" sizes="72x72">
+  <link rel="apple-touch-icon" href="/assets/imgs/icons/apple-icon-76x76.png" sizes="76x76">
+  <link rel="apple-touch-icon" href="/assets/imgs/icons/apple-icon-114x114.png" sizes="114x114">
+  <link rel="apple-touch-icon" href="/assets/imgs/icons/apple-icon-120x120.png" sizes="120x120">
+  <link rel="apple-touch-icon" href="/assets/imgs/icons/apple-icon-144x144.png" sizes="144x144">
+  <link rel="apple-touch-icon" href="/assets/imgs/icons/apple-icon-152x152.png" sizes="152x152">
+  <link rel="apple-touch-icon" href="/assets/imgs/icons/apple-icon-180x180.png" sizes="180x180">
+  <meta name="msapplication-TileImage" content="/assets/imgs/icons/app-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#fff">
+  <meta name="theme-color" content="#488aff">
+
+  <script> var deferredPrompt;</script>
+  <script src="assets/js/promise.js"></script>
+  <script src="assets/js/fetch.js"></script>
+
+  <script>
+    if(!window.Promise) {
+      window.Promise = Promise;
+    }
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+    }
+  
+    window.addEventListener('beforeinstallprompt', function(event) {
+      console.log('beforeinstallprompt fired');
+      event.preventDefault();
+      deferredPrompt = event;
+      return false;
+    });
+
+  </script>
+  <link href="build/main.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Ionic's root component and where the app will load -->
+  <ion-app></ion-app>
+
+  <!-- The polyfills js is generated during the build process -->
+  <script src="build/polyfills.js"></script>
+
+  <!-- The vendor js is generated during the build process
+       It contains all of the dependencies in node_modules -->
+  <script src="build/vendor.js"></script>
+
+  <!-- The main bundle js is generated during the build process -->
+  <script src="build/main.js"></script>
+
+  <!-- google maps script is loaded last as to not block rendering -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsiBNmWJvb4iRZUIwV9k-D1D6Ut-F0Yx0"></script>  
+</body>
+</html>

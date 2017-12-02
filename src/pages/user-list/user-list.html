@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar color="primary" hideBackButton="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ title }}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addPerson($event)">
+        <ion-icon name="person-add"></ion-icon>
+      </button>
+    </ion-buttons>    
+    <ion-buttons end *ngIf="notificationEnabled">
+      <button ion-button icon-only (click)="toggleNotification($event)">
+        <ion-icon *ngIf="!notificationOn" name="notifications-off"></ion-icon>  
+        <ion-icon *ngIf="notificationOn" name="notifications"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-searchbar #searchbar
+        [(ngModel)]="queryText"
+        (ionInput)="getUsers(undefined, true)"
+        placeholder="Search">
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="outer-content">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to load users"
+      refreshingSpinner="circles"
+      refreshingText="Loading applicants..."
+    >
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-list text-wrap>
+    <ion-grid fixed>
+      <ion-row align-items-stretch>
+        <ion-col col-12 col-md-6 col-lg-4 col-x-3 align-stretch *ngFor="let user of users">
+          <ion-card class="user-card">
+            <ion-card-header>
+              <button ion-item detail-none (click)="goToUserDetail(user)">
+                
+                <ion-thumbnail item-left>
+                  <img [src]="user.picture" alt="picture">
+                </ion-thumbnail>
+                {{user.name}}                
+              </button>           
+            </ion-card-header>
+            <ion-card-content class="outer-content">
+              <ion-list no-lines>
+                <button ion-item  (click)="goToUserDetail(user)">
+                  <h3><span ion-text color="primary">Title: </span>{{user.title}}</h3>
+                  <h3><span ion-text color="primary">Location: </span>{{user.location}}</h3>
+                  <h3><span ion-text color="primary">Registration Date: </span>{{user.regDate | date:"medium" }}</h3>
+                </button>                
+              </ion-list>
+            </ion-card-content>            
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content>

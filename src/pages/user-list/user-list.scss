@@ -1,0 +1,19 @@
+user-list {
+  .scroll-content {
+    background: #EDEDED!important;
+  }
+
+  img {
+    max-width: 170px;
+    border-radius: 50%;
+  }
+  
+  .user-card ion-card-header .item {
+    padding: 4px 16px;
+  }
+
+  .user-card ion-card-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
