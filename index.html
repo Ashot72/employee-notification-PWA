@@ -1,0 +1,839 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link="#0563C1" vlink="#954F72">
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;line-height:107%'>Employee Notification Application</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Demo link: </span><a
+href="http://goo.gl/ryagGK" target="_blank"><span style='font-size:14.0pt;
+line-height:107%'>http://goo.gl/ryagGK</span></a><span style='font-size:14.0pt;
+line-height:107%'> or </span><a
+href="https://employeenotification-440d8.firebaseapp.com/" target="_blank"><span
+style='font-size:14.0pt;line-height:107%'>https://employeenotification-440d8.firebaseapp.com</span></a></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Git Repo: </span><a
+href="https://github.com/Ashot72/employee-notification-PWA" target="_blank"><span
+style='font-size:14.0pt;line-height:107%'>https://github.com/Ashot72/employee-notification-PWA</span></a></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Application
+Description Page: </span><a
+href="https://ashot72.github.io/employee-notification-PWA/description.html"
+target="_blank"><span style='font-size:14.0pt;line-height:107%'>https://ashot72.github.io/employee-notification-PWA/description.html</span></a></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>What is PWA
+(Progressive Web App)?</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>You can add
+some features to any app running in the browser to enhance it. You progressive
+enhance your web pages to feel like native apps.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>If you would
+like to know how the app is implemented in detail then go to Application
+Description Page above. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>This is an
+Employee Notification Progressive Web App. Applicants can submit their info and
+work experience so employers can find them.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>The application
+works offline as well. It is installable app meaning you can add it to your
+home screen. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Applicants
+can submit the form while they are offline and data will be submitted as soon
+as network is available. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Employers
+can subscribe to get notifications about new applicants even if the application
+is closed.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Not all
+browsers support PWA features. Most of them provide some PWA features, such as
+caching but may not provide push notifications for example.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Only Chrome
+supports all features both on desktop and Android mobile. Seems Opera also
+supports all features.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>If your
+browser does not support PWA feature then that feature will be silently ignored
+and your app will work as expected without that feature.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>I have
+tested the application both on desktop and mobile using Edge, Firefox, Opera,
+Chrome and Safari browsers. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=289 height=570 id="Picture 1" src="index_files/image001.png"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 1</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>This is the
+main page of the application running in Chrome browser. I demonstrate it on my
+Galaxy 4 phone. Users can select a category by touching top left menu icon.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Default
+category is 'Accounting'. There are two icons at the top right corner. First
+one is 'Add Applicant' icon and the second one is the 'Subscribe Notification'
+one.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=301 height=605 id="Picture 2" src="index_files/image002.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 2</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Application
+has seven categories where applicants submit their info and work experience.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=634 height=429 id="Picture 3" src="index_files/image003.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 3</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>The same
+page on Chrome desktop.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=295 height=588 id="Picture 4" src="index_files/image004.png"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 4</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Touch the
+notification icon. Notification permission is requested to allow send
+notifications. Allow it.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=310 height=608 id="Picture 5" src="index_files/image005.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 5</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>'Employee
+Notification Service' notification received telling you that you are subscribed
+to the service. You will receive another notification </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>as soon as a
+new applicant is being registered. Were the notification first one on the list
+(in my case 'Connected as a media device' is the first one) </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>you would
+see a large interview picture in the notification. Another important thing to
+consider is that notification subscription is </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>browser and device
+combination. If you open another browser on the same device and navigate to
+application page </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>no
+notification registration would be available. You have to subscribe to
+notifications to receive it as it is another one.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=535 height=359 id="Picture 6" src="index_files/image006.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 6</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Notification
+on chrome desktop browser. You can unregister from subscription by clicking
+notification off icon.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=340 height=666 id="Picture 7" src="index_files/image007.png"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 7</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>The same
+page on my iPhone 6 using Chrome browser. You see there is no notification
+icon. The reason is that we do not show</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>notification
+icon is that Push API is not supported on IOS. This means we cannot show PWA push
+notifications when a new applicant is registered.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=335 height=657 id="Picture 8" src="index_files/image008.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 8</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>If you
+select a category you will be presented with a dialog titled 'Employee
+notification'. The application</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>will be
+installed on your home screen by touching 'ADD' button.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=346 height=668 id="Picture 9" src="index_files/image009.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 9</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Here is the
+app installed on my home screen.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=344 height=664 id="Picture 11" src="index_files/image010.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 10</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Touch the icon
+to run the app. Employee Notification app is initializing like a native app.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=328 height=645 id="Picture 12" src="index_files/image011.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 11</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Now the same
+app is running via desktop icon click. Could you see the difference? Compare it
+with Figure 8.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>The
+application looks like real app. No browser address bar. It is a standalone
+app.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=321 height=628 id="Picture 13" src="index_files/image012.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 12</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>If you did
+not install the app (by not clicking 'ADD' button) then the dialog (Figure 8)
+will not be presented anymore unless you clear site data.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Another
+option is to add via Chrome 'Add to Home screen option'. Select the menu
+(Figure 12).</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=301 height=584 id="Picture 15" src="index_files/image013.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 13</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Select 'Add
+to Home screen' option.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=298 height=584 id="Picture 16" src="index_files/image014.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 14</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>You add the
+app on your home screen.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=543 height=380 id="Picture 17" src="index_files/image015.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 15</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Similarly,
+we can 'Pin this page to Start' on Microsoft Edge browser.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=536 height=269 id="Picture 18" src="index_files/image016.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 16</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>The app page
+pinned to Start.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=340 height=672 id="Picture 19" src="index_files/image017.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 17</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>It is time
+to add an applicant.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=344 height=677 id="Picture 20" src="index_files/image018.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 18</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Application
+is requiring camera access permission. Allow it.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=310 height=613 id="Picture 21" src="index_files/image019.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 19</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Take your picture
+from video by clicking 'capture' button. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=322 height=635 id="Picture 22" src="index_files/image020.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 20</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Next click 'Get
+Location' button. Application is requiring location permission. Allow it.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=309 height=612 id="Picture 23" src="index_files/image021.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 22</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Fill in the
+form.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=309 height=593 id="Picture 24" src="index_files/image022.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 23</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>My location has
+been added once I clicked 'Get Location' button. You can change your location
+manually before submitting the form.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Submit the
+form.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=688 height=483 id="Picture 25" src="index_files/image023.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 23</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>I received
+both phone and desktop notifications as I was subscribed to both. I would like
+to mention that the notification is not a browser notification.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>It is system
+notification. You will still get it if your browser is closed. Touch the
+notification.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=334 height=663 id="Picture 26" src="index_files/image024.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 24</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>If the
+application was already running then you will be redirected to applicant's details
+page otherwise new</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>browser
+(standalone app) will be opened and will redirect you to applicant's details page.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=332 height=663 id="Picture 27" src="index_files/image025.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 25</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Applicant's
+location displayed on Google Map.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=331 height=658 id="Picture 28" src="index_files/image026.jpg"></span><span
+style='font-size:14.0pt;line-height:107%'> </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 26</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>This is the applicants'
+page of </span><span style='font-size:10.5pt;line-height:107%;font-family:"Arial",sans-serif;
+color:#222222;background:white'>&nbsp;'</span><span style='font-size:14.0pt;
+line-height:107%'>Information Technology' category. I am the only one right
+now.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=574 height=351 id="Picture 30" src="index_files/image027.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 27</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>The same
+page on desktop.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Let's add an
+applicant by not allowing camera and location permissions.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=340 height=674 id="Picture 31" src="index_files/image028.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 28</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Blocking
+camera permission.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=328 height=653 id="Picture 34" src="index_files/image029.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 29</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>This time
+file picker option is presented instead of video as no permission is granted. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Select a picture
+from your device.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=322 height=628 id="Picture 35" src="index_files/image030.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 30</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Block
+location permission.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=333 height=664 id="Picture 40" src="index_files/image031.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 31</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>If you try
+to touch 'Get Location' after location permission being blocked then you will
+always receive 'User denied Geolocation' message.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=336 height=663 id="Picture 36" src="index_files/image032.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 32</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>You must
+fill in Location field manually this time as location permission is blocked.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=322 height=652 id="Picture 37" src="index_files/image033.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 33</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Now we have
+two applicants in same category.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=323 height=649 id="Picture 38" src="index_files/image034.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 34</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Torch an
+applicant's control (card) Figure 33, if you would like to navigate to his
+details page.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=324 height=632 id="Picture 39" src="index_files/image035.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 35</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Applicant's
+location on Google Map.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>There is a
+way to reset blocked permissions.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=322 height=631 id="Picture 43" src="index_files/image036.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 36</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Touch menu
+icon then go to 'Settings'.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=323 height=634 id="Picture 44" src="index_files/image037.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 37</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Go to 'Site
+settings'.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=300 height=588 id="Picture 45" src="index_files/image038.png"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 38</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Permissions
+list under Site settings. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=307 height=602 id="Picture 46" src="index_files/image039.png"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 39</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Here is our
+site with blocked location permission.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=314 height=630 id="Picture 47" src="index_files/image040.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 40</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>'Clear &amp;
+Reset' removes permission. 'Get Location' button will present you a dialog
+about the permission again (Figure 20).</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=324 height=638 id="Picture 48" src="index_files/image041.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 41</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Alternatively,
+you just touch 'Block' link (Figure 40) and directly switch to 'Allow'.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=535 height=399 id="Picture 49" src="index_files/image042.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 42</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Chrome
+desktop browser permissions list location. Click the lock icon then select an
+item to change permission.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=355 height=699 id="Picture 66" src="index_files/image043.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 43</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>This is Add Applicant
+page on iPhone. iPhone does not show video. The only way is to touch 'Choose
+File'.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=340 height=677 id="Picture 67" src="index_files/image044.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 44</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>You have
+different options to select an image.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=326 height=650 id="Picture 68" src="index_files/image045.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 45</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Here is the
+file selected. Note, that 'Choose file' button option for iPhone is for camera 'allow'
+permission case (not the case with Android).</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=318 height=634 id="Picture 69" src="index_files/image046.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 46</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>When camera
+permission is disabled 'Take Photo' options is also disabled.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=332 height=662 id="Picture 70" src="index_files/image047.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 47</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>To
+enable/disable permission on iPhone go to Settings -&gt; General -&gt;
+Restrictions page.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>It is time
+to test offline access functionality.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=339 height=675 id="Picture 51" src="index_files/image048.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 48</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>I am turning
+off my Wi-Fi access.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=329 height=652 id="Picture 52" src="index_files/image049.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 49</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>I can still
+access the site without network access.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=326 height=657 id="Picture 53" src="index_files/image050.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 50</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Still can
+access the details page and see cached map.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Going to add
+an applicant while offline.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=336 height=661 id="Picture 55" src="index_files/image051.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 51</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Adding new
+applicant.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=498 height=415 id="Picture 56" src="index_files/image052.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 52</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Notification
+was sent to subscribed devices once network is available.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=344 height=694 id="Picture 57" src="index_files/image053.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 53</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Kevin Clive
+added.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=578 height=400 id="Picture 58" src="index_files/image054.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 54</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Adding
+another driver applicant to 'Transportation' category via desktop.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=334 height=652 id="Picture 59" src="index_files/image055.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 55</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Wi-Fi is
+turned on and I am on 'Information Technology' page. I pull down the page to
+reload data.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>I go offline
+by turning off Wi-Fi.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=338 height=665 id="Picture 60" src="index_files/image056.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 56</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>You see that
+the second driver information is available but the picture is not there. The
+reason is that we get all applicant data on whatever category page you are.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>The actual binary
+image is not in data, only the path. When you navigate to a category then at that
+time the actual images of that category are downloaded and cached. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>After that,
+pictures of the category will be available even you are offline. You have to
+decide what and when to cache assets. It is not required to cache everything</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>and display while
+offline.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=347 height=687 id="Picture 61" src="index_files/image057.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 57</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>I went
+online then pulled down 'Transportation' category page and received data, and
+this time images were cached. If I go offline all the pictures of that </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>category still
+will be displayed as they were already cached.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=349 height=695 id="Picture 63" src="index_files/image058.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 58</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Map shows
+you current position if you allow location permission.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=327 height=656 id="Picture 64" src="index_files/image059.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 59</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>If you
+access the map while offline or location permission not being allowed you will
+receive 'You seem to be offline' message.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=334 height=663 id="Picture 65" src="index_files/image060.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 60</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>My current
+location.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'><img
+border=0 width=332 height=644 id="Picture 42" src="index_files/image061.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 61</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Application
+allows to search applicants based on name, title, description and location.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
