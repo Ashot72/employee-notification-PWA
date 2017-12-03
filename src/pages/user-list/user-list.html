@@ -24,7 +24,7 @@
     </ion-searchbar>
   </ion-toolbar>
 </ion-header>
-<ion-content class="outer-content">
+<ion-content class="outer-content"><div #mapCanvas id="map"></div>
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content
       pullingIcon="arrow-dropdown"

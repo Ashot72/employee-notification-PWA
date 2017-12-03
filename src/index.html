@@ -32,6 +32,9 @@
   <script src="assets/js/promise.js"></script>
   <script src="assets/js/fetch.js"></script>
 
+  <script src="assets/js/localforage.min.js"></script>
+  <script src="assets/js/localforageUtil.js"></script>
+
   <script>
     if(!window.Promise) {
       window.Promise = Promise;
@@ -39,7 +42,29 @@
 
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('service worker installed'))
+        .then(() => {
+           console.log('service worker installed');
+
+           //When application is loading for thr first time then the first request is made before
+           //the service worker is active and the service worker will not receive fetch to insert
+           //applicants data into IndexedDB. No applicants data will be available
+           //when going offline just after the app has been loaded for the first time.
+           //By calling fetch we are sure data are in IndexedDB. You really do not need this fetch
+           //if you assume that users will click any catgeory after the app has been loaded
+           //for the first time before going offline. 
+           fetch('https://employeenotification-440d8.firebaseio.com/users.json')
+           .then(response => response.json())
+           .then(data => {
+             var dataArray = [];
+
+             for(var key in data) {
+                 var user = data[key];
+                 user.$key = key;
+                 dataArray.push(user);
+             }   
+             writeData("data", dataArray);  
+           });            
+        })
         .catch(err => console.error('Error', err));
     }
   
@@ -54,6 +79,7 @@
   <link href="build/main.css" rel="stylesheet">
 </head>
 <body>
+  <div id="map"></div>
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
 
@@ -67,7 +93,17 @@
   <!-- The main bundle js is generated during the build process -->
   <script src="build/main.js"></script>
 
+  <script>
+    // Load map, marker and infoWindow in case user goes offline wihtout navigating to applicant's details page to load map controls. 
+    // We can show marker and infowindow that case at least.
+    function initMap() {     
+        var uluru = { lat: 40.177200, lng: 44.503490 };  
+        var map = new google.maps.Map(document.getElementById('map'), { zoom: 16, mapTypeControl: true,  center: uluru });
+        var marker = new google.maps.Marker({ map: map, position: uluru });
+        var infowindow = new google.maps.InfoWindow();
+      }
+  </script>
   <!-- google maps script is loaded last as to not block rendering -->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsiBNmWJvb4iRZUIwV9k-D1D6Ut-F0Yx0"></script>  
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsiBNmWJvb4iRZUIwV9k-D1D6Ut-F0Yx0&callback=initMap"></script>  
 </body>
 </html>

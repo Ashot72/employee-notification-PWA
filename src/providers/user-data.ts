@@ -5,7 +5,7 @@ import { ISubscription } from '../interfaces/subscription';
 
 @Injectable()
 export class UserData { 
-    getUsers(categoryId: number, queryText: string = ''): Promise<any> {      
+    getUsers(categoryId: number, queryText: string = ''): Promise<any> {           
         return fetch(USERSURL)
          .then(response => response.json())
          .then(data => {
@@ -29,8 +29,8 @@ export class UserData {
         });        
     }
 
-     getUser(key: number): Promise<any> {    
-        return fetch(USERURL.replace('{key}', key.toString()))
+     getUser(key: string): Promise<any> {    
+        return fetch(USERURL.replace('{key}', key))
         .then(response => response.json())
         .then((data:IUser) => data);
      }
