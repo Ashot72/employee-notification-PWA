@@ -1,8 +1,6 @@
- This is Employee Notification PWA (Progressive Web App).
- 
- I created Employee Notification Progressive Web application (PWA). Applicants submit their personal info, picture and work experience so employers can find them. Application is developed on Ionic 3 (Angular 4) platform and publicly hosted on Firebase hosting. It also makes use of Firebase Database, Storage and Cloud Functions. Service worker is implemented both with static/dynamic caching directly and Google’s Workbox library. 
+ Applicants submit their personal info, picture and work experience so employers can find them. Application is developed on Ionic 3 (Angular 4) platform and publicly hosted on Firebase hosting. It also makes use of Firebase Database, Storage and Cloud Functions. Service worker is implemented both with static/dynamic caching directly and Google’s Workbox library. 
  You can add the app to your phone home screen directly (no app store anymore), run the app offline, submit you (applicant’s) data even if you are offline, subscribe and get notifications. You can run the app both on your mobile and dektop.
- 
+
  Go to [http://goo.gl/ryagGK](http://goo.gl/ryagGK) or [https://employeenotification-440d8.firebaseapp.com](https://employeenotification-440d8.firebaseapp.com)
 
 To get started.
