@@ -61,7 +61,7 @@ workboxSW.router.registerRoute('https://employeenotification-440d8.firebaseio.co
     )    
 );
 
-workboxSW.router.registerRoute(/(\/build\/\d+)/, workboxSW.strategies.networkFirst({
+workboxSW.router.registerRoute(/(\/build\/\d+)/, workboxSW.strategies.staleWhileRevaliate({
   cacheName: 'builds',
   networkTimeoutSeconds: 3
 }));
